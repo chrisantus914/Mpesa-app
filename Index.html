@@ -1,0 +1,37 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M-Pesa App</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#f5f5f5;color:#222}
+header{background:#159447;color:white;text-align:center;padding:25px}
+.container{max-width:480px;margin:20px auto;padding:15px}
+.balance{background:white;padding:20px;border-radius:15px;margin-bottom:20px}
+.amount{font-size:30px;font-weight:bold;color:#159447}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+button{padding:20px 10px;border:0;border-radius:12px;background:white;font-size:16px;font-weight:bold}
+#message{margin-top:20px;padding:15px;background:#e5f5eb;border-radius:10px;text-align:center;display:none}
+</style>
+</head>
+<body><header>
+<h1>M-Pesa</h1>
+<p>Mobile Money App</p>
+</header><div class="container">
+<div class="balance">
+<h2>Available Balance</h2>
+<div class="amount">KSh 0.00</div>
+</div><div class="grid">
+<button onclick="show('Send Money')">Send Money</button>
+<button onclick="show('Buy Airtime')">Buy Airtime</button>
+<button onclick="show('Pay Bill')">Pay Bill</button>
+<button onclick="show('Withdraw')">Withdraw</button>
+</div><div id="message"></div>
+</div><script>
+function show(option){
+let box=document.getElementById("message");
+box.innerText=option+" selected";
+box.style.display="block";
+}
+</script></body>
+</html>
